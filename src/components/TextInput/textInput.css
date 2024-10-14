@@ -1,0 +1,91 @@
+/* src/TextInput.css */
+.text-input {
+    display: flex;
+    align-items: center; /* Center align icon and input */
+    border: 1px solid #ccc; /* Border for the input container */
+    border-radius: 8px; /* Rounded corners */
+    padding: 0.5rem; /* Padding inside the container */
+    max-width: 400px; /* Set a maximum width */
+    width: 90%; /* Use a percentage to allow for responsiveness */
+    box-sizing: border-box; /* Include padding in width */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    margin: 9px auto; /* Center the component */
+  }
+  
+  .icon {
+    margin-right: 0.5rem; /* Space between icon and input */
+    display: flex; /* Center the icon */
+    align-items: center;
+  }
+  
+  .input-field {
+    border: none; /* Remove default border */
+    outline: none; /* Remove outline on focus */
+    flex: 1; /* Make input field take available space */
+    padding: 0.5rem; /* Padding for input field */
+    font-size: 1rem; /* Base font size */
+    width: 100%; /* Allow input field to fill available space */
+  }
+
+  /* Center placeholder style */
+.input-field.centered {
+    text-align: center; /* Center the text */
+}
+  
+  .input-field::placeholder {
+    color: #999; /* Placeholder color */
+    opacity: 1; /* Ensure placeholder is visible */
+  }
+
+  
+  
+  /* Hover and focus styles */
+  .text-input:hover {
+    border-color: #007bff; /* Change border color on hover */
+  }
+  
+  .input-field:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 600px) {
+    .text-input {
+      padding: 0.4rem; /* Adjust padding for smaller screens */
+    }
+  
+    .icon {
+      margin-right: 0.4rem; /* Adjust margin for smaller screens */
+    }
+  
+    .input-field {
+      padding: 0.4rem; /* Adjust input padding */
+      font-size: 0.9rem; /* Slightly smaller font size */
+    }
+  }
+  
+  /* Styles for 375px screens */
+  @media (max-width: 375px) {
+    .text-input {
+      padding: 0.35rem; /* Further adjust padding */
+    }
+  
+    .input-field {
+      padding: 0.35rem; /* Adjust input padding */
+      font-size: 0.85rem; /* Smaller font size for 375px */
+    }
+  }
+  
+  /* Styles for 320px screens */
+  @media (max-width: 320px) {
+    .text-input {
+      padding: 0.3rem; /* Further adjust padding */
+    }
+  
+    .input-field {
+      padding: 0.3rem; /* Adjust input padding */
+      font-size: 0.8rem; /* Smaller font size for 320px */
+    }
+  }
+  

@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  background-color: blue;
+  display: flex;
+  /* background-color: blue; */
 }
 
 .App-logo {
