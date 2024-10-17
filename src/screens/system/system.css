@@ -1,0 +1,236 @@
+/* Container styling */
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 10px; /* Adds space between the boxes */
+  padding: 0; /* Remove padding from the main container */
+  align-items: stretch; /* Ensure all boxes have equal height */
+}
+
+/* General Box Styling */
+.box {
+  padding: 20px;
+  /* text-align: center; */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow boxes to grow and fill space */
+}
+
+/* First Box Styling */
+.box1 {
+  width: 30%;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.dropdown-section,
+.query-input-section {
+  margin-bottom: 20px;
+}
+
+.dropdown-section select,
+.query-input-section textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.dropdown-section select {
+  cursor: pointer;
+}
+
+.saved-queries-section {
+  flex-grow: 1;
+  margin-bottom: 20px;
+  text-align: left;
+  overflow-y: auto; /* Allows scrolling if content is too long */
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  margin: 10px 0;
+}
+
+/* Second Box Styling */
+.box2 {
+  width: 60%;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space out the elements */
+  height: 100%;
+  overflow-y: scroll;
+  padding: 1rem;
+}
+
+/* Customer ID */
+.customer-id {
+  text-align: right;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* JSON Data Table */
+.json-data-section {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.json-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.json-table th,
+.json-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.json-table th {
+  background-color: #f2f2f2;
+}
+
+/* Summary Section */
+.summary-section {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.summary-section p {
+  margin: 5px 0;
+}
+
+/* Chart Section */
+.chart-section {
+  text-align: left;
+}
+
+#chart-container {
+  width: 100%;
+  height: 200px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Buttons at the bottom */
+.chart-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.chart-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.chart-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Third Box Styling */
+.box3 {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  height: 100vh;
+}
+
+/* Agents Heading */
+.agents-heading {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Clickable Divs Section */
+.clickable-divs {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Ensure divs stretch full width */
+}
+
+.clickable-div {
+  padding: 15px 10px;
+  background-color: #f0f0f0;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.clickable-div:hover {
+  background-color: #e0e0e0;
+}
+
+/* Separator between clickable divs */
+.clickable-div + .separator {
+  margin: 10px 0;
+}
+
+/* Adjusting drawer width to be consistent */
+.drawer-container {
+  width: 30%; /* Consistent width with first box */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .box1,
+  .box2,
+  .box3 {
+    width: 100%;
+    height: auto;
+  }
+
+  .query-input-section textarea {
+    height: 100px; /* Ensure the text area has a consistent height on smaller screens */
+  }
+
+  .dropdown-section select {
+    font-size: 16px; /* Slightly smaller font size for mobile */
+  }
+
+  .dropdown-section label {
+    font-size: 16px; /* Slightly smaller font size for mobile */
+  }
+
+  .clickable-div {
+    font-size: 16px; /* Adjust size on mobile */
+  }
+
+  .chart-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  #chart-container {
+    height: 150px;
+  }
+}

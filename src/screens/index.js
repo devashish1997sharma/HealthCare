@@ -1,5 +1,9 @@
+import Dashboard from "./dashboard/dashboard";
 import Login from "./login/login";
+import System from "./system/system";
 
-export default {
-    Login
+export {
+    Login,
+    Dashboard,
+    System
 }

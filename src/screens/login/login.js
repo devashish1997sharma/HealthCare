@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import './login.css';
-import TextInput from '../../components/TextInput/textInput';
 import { FaUser, FaLock } from 'react-icons/fa';
-import Button from '../../components/Button/button';
+import { useNavigate } from 'react-router-dom';
+import { Button, TextInput } from '../../components';
 
 const Login = () => {
     const [inputValue, setInputValue] = useState('');
     const [userId, setUserId] = useState('');
     const [pass, setPass] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
 
     const handleTogglePassword = () => {
       setShowPassword(!showPassword);
@@ -18,6 +19,7 @@ const Login = () => {
         // Check if all fields are filled
         if (inputValue && userId && pass) {
             alert('Login Successfully!');
+            navigate('/dashboard')
         } else {
             alert('Please fill all details');
         }
