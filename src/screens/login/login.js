@@ -12,7 +12,7 @@ const Login = () => {
     const navigate = useNavigate();
 
     const handleTogglePassword = () => {
-      setShowPassword(!showPassword);
+        setShowPassword(!showPassword);
     };
 
     const handleLoginClick = () => {
@@ -50,12 +50,12 @@ const Login = () => {
                 onChange={(e) => setPass(e.target.value)}
             />
             <Button
-        label="Login" 
-        onClick={handleLoginClick} 
-        variant="primary" 
-        size="medium" 
-        style={{ marginTop: '20px' }} // Optional margin
-      />
+                label="Login"
+                onClick={handleLoginClick}
+                variant="primary"
+                size="medium"
+                style={{ marginTop: '20px' }} // Optional margin
+            />
         </div>
     );
 
