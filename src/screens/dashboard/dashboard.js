@@ -6,7 +6,7 @@ const Dashboard = () => {
     const navigate = useNavigate();
 
     const handleLoginClick = (pathName) => {
-        if(pathName == 'analytics') {
+        if(pathName === 'analytics') {
             navigate('/system')
         }else {
             navigate('/summary')
